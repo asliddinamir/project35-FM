@@ -1,5 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+:root {
+    --facebook: hsl(208, 92%, 53%);
+    --twitter: hsl(203, 89%, 53%);
+    --instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --youtube: hsl(348, 97%, 39%);
+    --toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --lime_green: hsl(163, 72%, 41%);
+    --bright_red: hsl(356, 69%, 56%);
+    --bg_color: hsl(230, 17%, 14%);
+    --bg_top_color: hsl(232, 19%, 15%);
+    --card_bg: hsl(228, 28%, 20%);
+    --text_color: hsl(228, 34%, 66%);
+    --big_text_color: hsl(0, 0%, 100%);
+    --btn_bg: hsl(230, 17%, 14%);
+}
+
+.light_mode {
+    --btn_bg: hsl(0, 0%, 100%);
+    --toggle: hsl(230, 22%, 74%);
+    --bg_color: hsl(0, 0%, 100%);
+    --bg_top_color: hsl(225, 100%, 98%);
+    --card_bg: hsl(227, 47%, 96%);
+    --text_color: hsl(228, 12%, 44%);
+    --big_text_color: hsl(230, 17%, 14%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Inter', sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--bg_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    width: 75%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: red;
+}
+
+.title_box h2 {
+    font-size: 30px;
+    color: var(--big_text_color);
+    font-weight: 800;
+}
+
+.header p {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--text_color);
+}
+
+.theme_switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: blue;
+}
+
+.toggler {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 2.5px;
+    width: 40px;
+    height: 20px;
+    border: none;
+    border-radius: 10px;
+    background: var(--toggle);
+    overflow: hidden;
+    position: relative;
+    transition: background .3s ease;
+}
+
+.togglerBtn {
+    background-color: var(--btn_bg);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    left: 3px;
+    overflow: hidden;
+    transition: left 0.3s ease;
+}
+
+
+.toggler.right .togglerBtn {
+    left: 22px;
+    background: var(--btn_bg);
+}
+
+.toggler.right {
+    background: var(--toggle);
 }
