@@ -41,6 +41,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    padding: 0 0 2rem 0;
 }
 
 .red {
@@ -75,20 +77,6 @@ body {
     width: 75%;
 }
 
-@media(max-width: 1240px) {
-    .container {
-        width: 72.1%;
-        min-width: 873px;
-        padding: 2.5rem 0rem 0rem 0rem;
-    }
-
-    .box,
-    .overview_box {
-        max-width: 200px;
-        height: 190px;
-    }
-
-}
 
 .header {
     display: flex;
@@ -266,4 +254,121 @@ section {
 .overview_stats small {
     font-size: 11.2px;
     font-weight: 700;
+}
+
+footer {
+    font-size: 12px;
+    color: var(--text_color);
+    text-align: center;
+}
+
+footer a {
+    color: var(--bright_red);
+}
+
+hr {
+    display: none;
+}
+
+@media(max-width: 1240px) {
+    .container {
+        width: 72.1%;
+        min-width: 873px;
+        padding: 2.5rem 0rem 0rem 0rem;
+    }
+
+    .box,
+    .overview_box {
+        max-width: 200px;
+        height: 190px;
+    }
+}
+
+@media(max-width:921px) {
+    .container {
+        min-width: 424px;
+        max-width: 424px;
+    }
+
+    .togglerBtn {
+        left: 2px;
+    }
+
+    .toggler.right .togglerBtn {
+        left: 18px;
+    }
+}
+
+@media(max-width:460px) {
+    .container {
+        width: 100%;
+        min-width: 290px;
+        max-width: 418px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header {
+        flex-direction: column;
+        max-width: 270px;
+        min-width: 270px;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title_box {
+        width: 100%;
+    }
+
+    .title_box h2 {
+        font-size: 18px;
+        margin-bottom: .5rem;
+    }
+
+    .title_box p {
+        font-size: 14px;
+    }
+
+    .theme_switcher {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .toggler.right .togglerBtn {
+        left: 22px;
+    }
+
+    hr {
+        display: block;
+        width: 100%;
+        border: 1px solid var(--text_color);
+    }
+
+    .box,
+    .overview_box {
+        min-width: 270px;
+    }
+
+    .box {
+        height: 147px;
+    }
+
+    .box_body h1 {
+        font-size: 36px;
+    }
+
+    .overview_box {
+        height: 97px;
+    }
+
+    .overview_boxes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        font-size: 10px;
+    }
 }
